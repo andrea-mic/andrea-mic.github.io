@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Sorting algortithms</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="title"> SORTING ALGORITMS </h1>
+        </header>
+        <main>
+            <div id="data"> operations: 0 </div>
+            <canvas id="graph"></canvas>
+            
+            <div id="wrapper">
+                <div id="description-box"></div>
+
+                <div id="buttons-box">
+                    <select class="button select-input" id="algorithm_selection">
+                        <option> - select algorithm - </option>
+                        <option> selection sort </option>
+                        <option> bubble sort </option>
+                        <option> insertion sort </option>
+                        <option> quick sort </option>
+                        <option> merge sort (NA) </option>
+                        <option> bogo sort </option>
+                    </select>
+                    <input class="button" id="sorting_start_button" type="button" onclick="startSort()" value="Start sorting!" />
+                    <input class="button" id="stop_button" type="button" onclick="stopAnimation()" value="Stop" />
+                    <input class="button" id="randomize_button" type="button" onclick="randomizeItems()" value="Randomize" />
+
+                    <svg id="settings_icon_svg">
+                        <path id="settings_icon_path" d="M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 3.999A2 2 0 0 0 12 15z">
+                    </svg>
+                </div>
+                
+                <div id="settings">
+                    
+                    <span> Number of items: </span>
+                    <input class="text_input" id="items_number_input" type="text" value="50" /> <br>
+                    <span> Operation time (ms):  </span>
+                    <input class="text_input" id="operation_time_input" type="text" value="10" /> <br>
+                    <span> Range:  </span>
+                    <input class="text_input" id="range_input" type="text" value="100" /> <br>
+                    <span> Graph height:  </span>
+                    <input class="text_input" id="graph_height_input" type="text" value="400" /> <br>
+                    <span> Graph width:  </span>
+                    <input class="text_input" id="graph_width_input" type="text" value="800" /> <br>
+                    
+                    <input id="fill_rect_input" type="checkbox" onclick="toggleOption('rect_fill')" name="fill" checked="true">
+                    <label> Fill </label>
+                    <input id="border_rect_input" type="checkbox" onclick="toggleOption('rect_border')" name="border">
+                    <label> Border </label>
+                
+                </div>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+    </body>
+    <script src="script.js"></script>
+</html>
